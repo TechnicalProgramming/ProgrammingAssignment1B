@@ -9,7 +9,7 @@ namespace Programming_Assignment2StudentPredicate
     /// <summary>
     /// 
     /// </summary>
-    abstract class BaseCalculator
+    abstract class BaseCalculator 
     {
         #region Fields
 
@@ -35,7 +35,7 @@ namespace Programming_Assignment2StudentPredicate
         /// <param name="additionalTest"></param>
         /// <param name="projectTest"></param>
         /// <returns></returns>
-        public abstract float CalculatePredicateNeeded(int practicalTest, int termTest1, int termTest2, int additionalTest, int projectTest);
+        public abstract float CalculatePredicateNeeded(float predicate);
         
         #endregion
     }

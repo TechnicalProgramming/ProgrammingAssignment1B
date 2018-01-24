@@ -11,6 +11,10 @@ namespace Programming_Assignment2StudentPredicate
     /// </summary>
     abstract class BaseStudentTests
     {
+        #region Enum
+        
+        #endregion
+
         #region Fields
 
         protected int practicalTest = 0;
