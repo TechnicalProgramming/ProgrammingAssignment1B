@@ -33,7 +33,30 @@ namespace Programming_Assignment2StudentPredicate
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            // Create an instance of the class calculate predicate
+            PredicateCalculator predicateCalculator = new PredicateCalculator();
+            // Send the user input as parameters
+            // Returns the predicate results
+            predicateCalculator.PredicateResults = predicateCalculator.CalculatePredicate(int.Parse(practicalsTextBox.Text), int.Parse(term1TextBox.Text), int.Parse(term2TextBox.Text), int.Parse(additionalTextBox.Text), int.Parse(projectTextBox.Text));
+            // Get the predicate needed
+            predicateCalculator.PredicateNeeded = predicateCalculator.CalculatePredicateNeeded(predicateCalculator.PredicateResults);
 
+            if (predicateCalculator.PredicateResults > 50)
+            {
+                // Change the font colour of the label
+                predicateResultsLabel.ForeColor = Color.Green;
+            }
+            if (predicateCalculator.PredicateResults < 50)
+            {
+                // Change the colour of the label
+                predicateResultsLabel.ForeColor = Color.Red;
+            }
+            predicateResultsLabel.Text = "Your predicate is: " + predicateCalculator.PredicateResults.ToString();
+            predicateNeededLabel.Text = "You need " + predicateCalculator.PredicateNeeded.ToString() + " in the exam to pass";
+        }
+        private void goodMarksButton_Click(object sender, EventArgs e)
+        {
+            calculateButton.Enabled = true;
         }
     }
 }

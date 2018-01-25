@@ -122,6 +122,7 @@
             this.goodMarksButton.TabIndex = 0;
             this.goodMarksButton.Text = "Good Marks";
             this.goodMarksButton.UseVisualStyleBackColor = true;
+            this.goodMarksButton.Click += new System.EventHandler(this.goodMarksButton_Click);
             // 
             // groupBox5
             // 

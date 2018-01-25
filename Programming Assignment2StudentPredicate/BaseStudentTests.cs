@@ -9,7 +9,7 @@ namespace Programming_Assignment2StudentPredicate
     /// <summary>
     /// Base class for all student tests
     /// </summary>
-    abstract class BaseStudentTests
+    public abstract class BaseStudentTests
     {
         #region Enum
         
@@ -31,31 +31,31 @@ namespace Programming_Assignment2StudentPredicate
         /// <summary>
         /// Practical test marks
         /// </summary>
-        public abstract int PracticalTest { get; }
+        public virtual int PracticalTest { get {return practicalTest; } set { practicalTest = value; } }
         /// <summary>
         /// Term test 1 marks
         /// </summary>
-        public abstract int TermTest1 { get; }
+        public virtual int TermTest1 { get {return termTest1; } set { termTest1 = value; } }
         /// <summary>
         /// Term test 2 marks
         /// </summary>
-        public abstract int TermTest2 { get; }
+        public virtual int TermTest2 { get {return termTest2; } set { termTest2 = value; } }
         /// <summary>
         /// Additional test marks
         /// </summary>
-        public abstract int AdditionalTest { get; }
+        public virtual int AdditionalTest { get {return additionalTest; } set { additionalTest = value; } }
         /// <summary>
         /// Project test marks
         /// </summary>
-        public abstract int ProjectTest { get; }
+        public virtual int ProjectTest { get {return projectTest; } set { projectTest = value; } }
         /// <summary>
         /// Predicate marks
         /// </summary>
-        public abstract float PredicateResults { get; }
+        public virtual float PredicateResults { get {return predicateResult; } set { predicateResult = value; } }
         /// <summary>
         /// Predicate needed 
         /// </summary>
-        public abstract float PredicateNeeded { get; }
+        public virtual float PredicateNeeded { get {return predicateNeeded; } set { predicateNeeded = value; } }
 
         #endregion
     }

@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 namespace Programming_Assignment2StudentPredicate
 {
 
-    class PredicateCalculator : BaseCalculator
+    public class PredicateCalculator : BaseCalculator
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public PredicateCalculator() { }
         public override float CalculatePredicate(int practicalTest, int termTest1, int termTest2, int additionalTest, int projectTest)
         {
             return  (practicalTest * TestWeights.Practical) +

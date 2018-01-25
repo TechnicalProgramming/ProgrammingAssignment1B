@@ -9,7 +9,7 @@ namespace Programming_Assignment2StudentPredicate
     /// <summary>
     /// 
     /// </summary>
-    abstract class BaseCalculator 
+    public abstract class BaseCalculator : BaseStudentTests
     {
         #region Fields
 
