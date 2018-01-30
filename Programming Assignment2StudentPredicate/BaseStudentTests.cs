@@ -12,7 +12,6 @@ namespace Programming_Assignment2StudentPredicate
     public abstract class BaseStudentTests
     {
         #region Enum
-        
         #endregion
 
         #region Fields

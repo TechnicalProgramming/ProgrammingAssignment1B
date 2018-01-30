@@ -113,6 +113,7 @@
             this.badMarksButton.TabIndex = 1;
             this.badMarksButton.Text = "Bad Marks";
             this.badMarksButton.UseVisualStyleBackColor = true;
+            this.badMarksButton.Click += new System.EventHandler(this.badMarksButton_Click);
             // 
             // goodMarksButton
             // 

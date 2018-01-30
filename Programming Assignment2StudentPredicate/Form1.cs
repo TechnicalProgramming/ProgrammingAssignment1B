@@ -14,6 +14,7 @@ namespace Programming_Assignment2StudentPredicate
     {
         // Class variables 
         ResetFormComponents resetFormComponents = ResetFormComponents.Instance;
+        RandomMarks randomMarks = RandomMarks.Instance;
         public Form1()
         {
             InitializeComponent();
@@ -53,10 +54,55 @@ namespace Programming_Assignment2StudentPredicate
             }
             predicateResultsLabel.Text = "Your predicate is: " + predicateCalculator.PredicateResults.ToString();
             predicateNeededLabel.Text = "You need " + predicateCalculator.PredicateNeeded.ToString() + " in the exam to pass";
+            // Activate the clear button
+            clearButton.Enabled = true;
         }
         private void goodMarksButton_Click(object sender, EventArgs e)
         {
-            calculateButton.Enabled = true;
+            // Call a method to enable the calculate button
+            EnableCalculateButton();
+            // Call a method to generate good marks
+            randomMarks.GenerateGoodMarks();
+            // Call a method to populate the GUI
+            PopulateGUI();
+        }
+
+        private void badMarksButton_Click(object sender, EventArgs e)
+        {
+            EnableCalculateButton();
+            // Call a method to generate bad marks
+            randomMarks.GenerateBadMarks();
+            // Populate the GUI
+            PopulateGUI();
+        }
+        // Enable the calculate button
+        public bool EnableCalculateButton()
+        {
+            try
+            {
+                // Enable the good marks button
+                calculateButton.Enabled = true;
+                return true;
+            }catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool PopulateGUI()
+        {
+            try
+            {
+                practicalsTextBox.Text = randomMarks.PracticalTest.ToString();
+                term1TextBox.Text = randomMarks.TermTest1.ToString();
+                term2TextBox.Text = randomMarks.TermTest2.ToString();
+                additionalTextBox.Text = randomMarks.AdditionalTest.ToString();
+                projectTextBox.Text = randomMarks.ProjectTest.ToString();
+                return true;
+            }catch(Exception ex)
+            {
+                return false;
+            }
         }
     }
 }
